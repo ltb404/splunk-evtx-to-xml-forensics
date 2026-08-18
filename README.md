@@ -252,7 +252,7 @@ Requires bash 4.4+ (any current Linux distro). Reports/checkpoints are tab-separ
 3. Full run              -> index everything
 ```
 
-Segment counting is the most common thing to get wrong on the first try — for a Windows path `C:\WORK\MW_Converted\HOST01\Security.xml`, `C:` is segment 1; for a Linux path `/home/you/xmldata/HOST01/Security.xml`, `home` is segment 1 (leading `/` is stripped before counting). Always confirm with a dry run before a real batch.
+Segment counting is the most common thing to get wrong on the first try — for a Windows path `C:\FOLDER1\FOLDER2\HOST01\Security.xml`, `C:` is segment 1; for a Linux path `/home/you/xmldata/HOST01/Security.xml`, `home` is segment 1 (leading `/` is stripped before counting). Always confirm with a dry run before a real batch.
 
 ---
 
