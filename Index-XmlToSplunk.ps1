@@ -16,12 +16,12 @@
             ...
 
     For a full path such as:
-        C:\WORK\MW_Converted\HOST01\Security.xml
+        D:\LOGS_TO_CHECK\FOLDER\HOST01\Security.xml
 
     splitting on '\' gives segments (1-based):
-        1: C:
-        2: WORK
-        3: MW_Converted
+        1: D:
+        2: LOGS_TO_CHECK
+        3: FOLDER
         4: HOST01
         5: Security.xml
 
@@ -91,17 +91,17 @@
 
 .EXAMPLE
     # Dry run first - see exactly which host would be derived for each file
-    .\Index-XmlToSplunk.ps1 -SourceRoot C:\WORK\MW_Converted -Index winlogs `
+    .\Index-XmlToSplunk.ps1 -SourceRoot D:\LOGS_TO_CHECK\FOLDER\ -Index winlogs `
         -SourceType wevtutil_rendered_xml -HostSegmentIndex 4 -WhatIf
 
 .EXAMPLE
     # Quick validation against 2 files only
-    .\Index-XmlToSplunk.ps1 -SourceRoot C:\WORK\MW_Converted -Index winlogs `
+    .\Index-XmlToSplunk.ps1 -SourceRoot  D:\LOGS_TO_CHECK\FOLDER\ -Index winlogs `
         -SourceType wevtutil_rendered_xml -HostSegmentIndex 4 -Limit 2
 
 .EXAMPLE
     # Full run, assuming 'splunk login' was already run in this shell/session
-    .\Index-XmlToSplunk.ps1 -SourceRoot C:\WORK\MW_Converted -Index winlogs `
+    .\Index-XmlToSplunk.ps1 -SourceRoot  D:\LOGS_TO_CHECK\FOLDER\ -Index winlogs `
         -SourceType wevtutil_rendered_xml -HostSegmentIndex 4
 
 .NOTES
